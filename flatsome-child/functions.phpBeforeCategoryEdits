@@ -10,13 +10,6 @@ add_filter( 'woocommerce_subcategory_count_html', 'jk_hide_category_count' );
 		// No count
 	}
 
-add_filter( 'woocommerce_product_subcategories_hide_empty', 'show_empty_categories', 10, 1 ); //show empy categoies
-function show_empty_categories ( $show_empty ) {
-    $show_empty  =  true;
-    // You can add other logic here too
-    return $show_empty;
-}
-
 
 /* add the catalog mode single product stuff from theme options */
 function zcatalog_mode_product(){
@@ -38,10 +31,10 @@ if(function_exists('get_term_meta')){
 		 ?>
 		<tr class="form-field">
 		<th scope="row" valign="top"><label for="term_meta[cat_help]">Category Help</label></th>
-			<td>
-					<?php
+			<td>				
+					<?php 
 
-					$content = esc_attr( $term_meta[0]['cat_help'] ) ? esc_attr( $term_meta[0]['cat_help'] ) : '';
+					$content = esc_attr( $term_meta[0]['cat_help'] ) ? esc_attr( $term_meta[0]['cat_help'] ) : ''; 
 					echo '<textarea id="term_meta[cat_help]" name="term_meta[cat_help]">'.$content.'</textarea>'; ?>
 				<p class="description">Enter a value for this field. Shortcodes are allowed. This will be displayed in the product description in this category.</p>
 			</td>
@@ -66,8 +59,8 @@ if(function_exists('get_term_meta')){
 			update_term_meta($term_id, 'cat_meta', $term_meta);
 
 		}
-	}
-	add_action( 'edited_product_cat', 'save_taxonomy_custom_metaEBS', 10, 2 );
+	}  
+	add_action( 'edited_product_cat', 'save_taxonomy_custom_metaEBS', 10, 2 );  
 }
 
 /* add the category help description to the product description */
@@ -90,8 +83,8 @@ function ebs_category_help () {
 			} else {
 				// echo "<!-- cat_help not set -->";
 			}
-
-
+			
+			
 		} else {
 			// echo "<!-- no terms -->";
 		}
@@ -104,12 +97,12 @@ function ebs_category_help () {
 add_action('after_setup_theme', ea_setup);
 	/**  ea_setup
 	*  init stuff that we have to init after the main theme is setup.
-	*
+	* 
 	*/
 	function ea_setup() {
 	 /* do stuff here afte theme is setup, can call it's functions, etc */
 
-
+	
 	}
 
 	/* add filter to allow empty product categories to show in woo_product_categories() */
@@ -123,11 +116,11 @@ function my_woo_cats_1 () {
  * Remove WooCommerce Generator tag, styles, and scripts from non WooCommerce pages.
  */
 add_action( 'wp_enqueue_scripts', 'child_manage_woocommerce_styles', 99 );
-
+ 
 function child_manage_woocommerce_styles() {
  //remove generator meta tag
 remove_action( 'wp_head', array( $GLOBALS['woocommerce'], 'generator' ) );
-
+ 
 	 //first check that woo exists to prevent fatal errors
 	if ( function_exists( 'is_woocommerce' ) ) {
 	 	//dequeue scripts and styles
@@ -154,5 +147,5 @@ remove_action( 'wp_head', array( $GLOBALS['woocommerce'], 'generator' ) );
 			 wp_dequeue_script( 'jqueryui' );*/
 		}
 	}
-
+ 
 }
