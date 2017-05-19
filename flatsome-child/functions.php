@@ -10,7 +10,7 @@ add_filter( 'woocommerce_subcategory_count_html', 'jk_hide_category_count' );
 		// No count
 	}
 
-add_filter( 'woocommerce_product_subcategories_hide_empty', 'show_empty_categories', 10, 1 ); //show empy categoies
+add_filter( 'woocommerce_product_subcategories_hide_empty', 'show_empty_categories', 20, 1 ); //show empy categoies
 function show_empty_categories ( $show_empty ) {
     $show_empty  =  true;
     // You can add other logic here too
