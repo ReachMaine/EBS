@@ -1,0 +1,19 @@
+/* styles.scss - Style css for Fenceviewer style, usually added to the module class
+ * 
+ * Author: LSpeight
+ */
+ .EAhide {
+	height: 0px!important;
+ 	visibility: hidden;
+ 	display: none;
+ 	margin: 0px;
+ 	padding: 0px;
+ }
+
+ ul.product_picsAcross {
+ 	list-style: none;
+ 	li {
+ 		display: inline-block;
+
+ 	}
+ }

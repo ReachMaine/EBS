@@ -1,0 +1,142 @@
+@import url("../flatsome/css/foundation.css");
+/*
+	Theme Name: Flatsome Child Theme
+	Theme URI: http://flatsome.uxthemes.com/
+	Description: This is a child theme for Flatsome
+	Author: UX Themes
+	Author URI: http: //www.uxthemes.com/
+	Template: flatsome
+	Version: 1.8
+*/
+/*************** ADD YOUR CUSTOM CSS IN THIS AREA ***************/
+/* Import Statements ----------------------------------- */
+/* @import "compass"; */
+/* @import "compass/reset"; */
+/* @import "compass/utilities/general/clearfix"; */
+/* Colors ---------------------------------------------- */
+/* Typography ------------------------------------------ */
+/* General Tags ---------------------------------------- */
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: bold; }
+
+.pull-right {
+  float: right; }
+
+/* Classes ---------------------------------------------- */
+.EAHide {
+  height: 0px !important;
+  visibility: hidden;
+  display: none;
+  margin: 0px;
+  padding: 0px; }
+
+/* styles.scss - Style css for Fenceviewer style, usually added to the module class
+ * 
+ * Author: LSpeight
+ */
+.EAhide {
+  height: 0px !important;
+  visibility: hidden;
+  display: none;
+  margin: 0px;
+  padding: 0px; }
+
+ul.product_picsAcross {
+  list-style: none; }
+  ul.product_picsAcross li {
+    display: inline-block; }
+
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+@media print {
+  body a[href]:after {
+    content: ""; } }
+#main-content {
+  border-top: 10px solid #017f4c; }
+
+.catalog-mode-header {
+  padding-top: 0px; }
+
+#masthead .left-links #site-navigation {
+  margin-left: 0px !important; }
+#masthead .right-links ul.header-nav {
+  padding-top: 0px; }
+#masthead .right-links #ebs_cando {
+  height: 100px; }
+
+#masthead.stuck.move_down #ebs_cando {
+  max-height: 75px; }
+
+.top-divider {
+  border: 0px; }
+
+#content > .ux_banner {
+  margin-bottom: 15px; }
+
+aside.widget_layered_nav {
+  margin-bottom: 0px; }
+
+aside.widget_layered_nav select {
+  margin-bottom: 5px; }
+
+#content .row ul {
+  list-style-position: inside; }
+
+/* google custom search styling */
+.search-dropdown .nav-dropdown {
+  width: auto; }
+
+.ui-dialog {
+  z-index: 5; }
+
+.gsc-control-cse .gs-spelling,
+.gsc-control-cse .gs-result .gs-title,
+.gsc-control-cse .gs-result .gs-title * {
+  line-height: 20px; }
+
+/* Specific Products */
+.fiberon-brochures p {
+  border: 1px solid black; }
+
+/* Item Flebox Display */
+.ebs-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.ebs-item-box {
+  background-color: #017f4c;
+  border: 1px solid black;
+  margin: 0px 5px 20px;
+  width: 325px;
+  border: ra; }
+
+.ebs-item-logo-photo-box {
+  background-color: #ddd;
+  text-align: center; }
+
+.ebs-brand-logo {
+  margin: 10px auto;
+  height: 30px;
+  text-align: center;
+  padding: 0px 10px; }
+
+.ebs-item-photo {
+  margin: 10px;
+  width: 90%;
+  text-align: center; }
+
+.ebs-item-text-box {
+  padding: 10px; }
+
+.ebs-item-name {
+  text-align: center;
+  color: white; }
+
+.ebs-item-specs {
+  padding: 0px 20px;
+  color: white; }

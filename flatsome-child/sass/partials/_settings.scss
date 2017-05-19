@@ -1,0 +1,31 @@
+/* Colors ---------------------------------------------- */
+$ebsgreen: #017F4C;
+/* Typography ------------------------------------------ */
+
+/* General Tags ---------------------------------------- */
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+.pull-right {
+	float:right;
+}
+h1, h2, h3, h4, h5, h6, .component-content h2, .module-title .title  {
+
+}
+.module-title .title {
+	
+}
+
+
+/* Classes ---------------------------------------------- */
+.EAHide {
+	height: 0px!important;
+ 	visibility: hidden;
+ 	display: none;
+ 	margin: 0px;
+ 	padding: 0px;
+}

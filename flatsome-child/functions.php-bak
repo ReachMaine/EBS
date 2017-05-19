@@ -1,0 +1,87 @@
+<?php
+
+
+/* remove the displaying of price in the loop (for archives & search ) */
+ remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+/* nope - remove_action( 'woocommerce_variable_add_to_cart', 'woocommerce_variable_add_to_cart', 30 ); */
+/* hide the category count  */
+add_filter( 'woocommerce_subcategory_count_html', 'jk_hide_category_count' );
+	function jk_hide_category_count() {
+		// No count
+	}
+
+
+/* add a meta/custom field to the product categories for category help that we'll output in product summary */
+if(function_exists('get_term_meta')){
+	function ebs_taxonomy_edit_meta_field($term) {
+		// put the term ID into a variable
+		$t_id = $term->term_id;
+		// retrieve the existing value(s) for this meta field. This returns an array
+		$term_meta = get_term_meta($t_id,'cat_meta');
+		if(!$term_meta){$term_meta = add_term_meta($t_id, 'cat_meta', '');}
+		 ?>
+		<tr class="form-field">
+		<th scope="row" valign="top"><label for="term_meta[cat_help]">Category Help</label></th>
+			<td>				
+					<?php 
+
+					$content = esc_attr( $term_meta[0]['cat_help'] ) ? esc_attr( $term_meta[0]['cat_help'] ) : ''; 
+					echo '<textarea id="term_meta[cat_help]" name="term_meta[cat_help]">'.$content.'</textarea>'; ?>
+				<p class="description">Enter a value for this field. Shortcodes are allowed. This will be displayed in the product description in this category.</p>
+			</td>
+		</tr>
+	<?php
+	}
+	add_action( 'product_cat_edit_form_fields', 'ebs_taxonomy_edit_meta_field', 10, 2 );
+
+
+	/* SAVE CUSTOM META*/
+	function save_taxonomy_custom_metaEBS( $term_id ) {
+		if ( isset( $_POST['term_meta'] ) ) {
+			$t_id = $term_id;
+			$term_meta = get_term_meta($t_id,'cat_meta');
+			$cat_keys = array_keys( $_POST['term_meta'] );
+			foreach ( $cat_keys as $key ) {
+				if ( isset ( $_POST['term_meta'][$key] ) ) {
+					$term_meta[$key] = $_POST['term_meta'][$key];
+				}
+			}
+			// Save the option array.
+			update_term_meta($term_id, 'cat_meta', $term_meta);
+
+		}
+	}  
+	add_action( 'edited_product_cat', 'save_taxonomy_custom_metaEBS', 10, 2 );  
+}
+
+/* add the category help description to the product description */
+add_action('woocommerce_single_product_summary', 'ebs_category_help', 35); /* priority of 35 puts it before Category (after desc) */
+function ebs_category_help () {
+	echo "<!-- category_help -->";
+	if (function_exists('get_term_meta')) {
+		global $post;
+		$terms = get_the_terms( $post->ID, 'product_cat' );
+		if ($terms ) {
+			foreach($terms as $term) {
+				$catID =  $term -> term_id;
+			}
+			//	echo "<!-- catID = ".$catID." -->";
+			$content = get_term_meta($catID, 'cat_meta');
+			if (isset($content[0]['cat_help'])) {
+				echo '<div class="product-cat-help"> ';
+				echo do_shortcode($content[0]['cat_help']);
+				echo '</div>';
+			} else {
+				// echo "<!-- cat_help not set -->";
+			}
+			
+			
+		} else {
+			// echo "<!-- no terms -->";
+		}
+	} else {
+		// echo "<!-- get_term_meta doenst exist -->";
+	}
+}
+
+?>

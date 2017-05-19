@@ -1,0 +1,118 @@
+/* ===================================================== */
+/* Media Queries --------------------------------------- */
+/* ===================================================== */
+
+$smartphone-small: 320px;
+$smartphone-large: 480px;
+$tablet-small: 768px;
+$tablet-large: 1024px;
+
+$smallphone-max: 480px;
+$phone-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 959px;
+$desktop-min: 960px;
+$desktop-max: 1199px;
+$largedisplay-min: 1200px;
+
+@media(min-width: $desktop-min) {
+	#rt-showcase { // overlap the FPSS with header at bigger sizes.
+		.rt-block.ea-over {
+			//margin-top: -90px;
+		}
+	}
+}
+@media(max-width: $tablet-max) and (min-width: $tablet-min) {
+	#rt-showcase { // overlap the FPSS with header at bigger sizes.
+		.rt-block.ea-over {
+			//margin-top: -14px;
+		}
+	}
+}
+
+@media(max-width: $tablet-max) {
+	#rt-top-surround {	
+		height: auto;
+	}
+}
+@media(max-width: $smallphone-max) {
+	.rt-block.ea-addr {
+		padding-right: 0px;
+		margin-left: 0px;
+	}
+}
+
+
+/************ slide show **********************/
+ /** copied from iternet as a start - getting FPSS to be 'responsive' -need work! **/
+ /*********************************************/
+@media(min-width: $largedisplay-min) { // 1200 px wide or wider
+	.fpss-container{
+		width:100%!important;
+		height:auto!important;
+		.slides-wrapper {
+			width: 66%; // or 600px;
+		}
+		.navigation-wrapper {
+			width: 33%; // 300px
+		}
+	}
+}
+@media(min-width: $desktop-min) and (max-width: $desktop-max) { // 960 to 1199
+	.fpss-container{
+		width:100%!important;
+		height:auto!important;
+		.slides-wrapper {
+			width: 80%!important; // or 600px;
+		}
+		.navigation-wrapper {
+			width: 20%!important; // 300px
+		}
+	}
+}
+
+// at this width, the navigation is UNDER the slides.
+@media(min-width: $tablet-min) and (max-width: $tablet-max) { // 767 to 959 
+	.fpss-container{
+		width:100%!important;
+		height:auto!important;
+		.slides-wrapper {
+			width: 100%!important; // 
+		}
+		.navigation-wrapper { 
+			width: 100%!important;  // 
+			height: auto!important;
+			font-size: 0px;
+			ul.navigation {
+				li.navigation-button {
+					height: 45px!important;
+					width: 25%!important;
+					display: inline-block;
+					a {
+						border-top:1px solid #5c5a5b!important; // the first button doesnt have this, looks weird when under
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: $phone-max) { //
+	.fpss-container{
+		width:100%!important;
+		height:auto!important;
+		.slides-wrapper {
+			width: 100%!important; // 
+		} 
+	}
+	.navigation-wrapper{
+		display: none;
+		visibility: hidden;
+	}
+}
+
+@media(min-width: 960px) {
+	.ea-menu { // used on sidebar menu's
+		//margin-top: 65px;
+		//border-top: 1px #D1D1D1 solid;
+	}
+}

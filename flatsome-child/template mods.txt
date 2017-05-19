@@ -1,0 +1,3 @@
+Template mods for EBS using Flatsome theme
+[1] single product page, image was too large for EBS's content.
+	- make image container 4 and summary containter 6 (instead of the other way around).
