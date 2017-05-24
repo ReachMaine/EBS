@@ -81,10 +81,10 @@ aside.widget_layered_nav select {
 .ui-dialog {
 	z-index: 5;
 }
-.gsc-control-cse .gs-spelling, 
-.gsc-control-cse .gs-result .gs-title, 
+.gsc-control-cse .gs-spelling,
+.gsc-control-cse .gs-result .gs-title,
 .gsc-control-cse .gs-result .gs-title * {
-	line-height: 20px; 
+	line-height: 20px;
 }
 
 /* Specific Products */
@@ -107,6 +107,10 @@ aside.widget_layered_nav select {
 	margin: 0px 5px 20px;
 	width: 325px;
 	border:ra;
+}
+
+.flex-two-wide .ebs-item-box {
+	width: 500px;
 }
 
 .ebs-item-logo-photo-box {
