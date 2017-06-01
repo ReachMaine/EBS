@@ -28,17 +28,29 @@ $largedisplay-min: 1200px;
 			//margin-top: -14px;
 		}
 	}
+	.homepage-categories .homepage-category {
+		height: 380px;
+	}
 }
 
 @media(max-width: $tablet-max) {
-	#rt-top-surround {	
+	#rt-top-surround {
 		height: auto;
+	}
+}
+
+@media(max-width: $phone-max) {
+	.homepage-categories .homepage-category {
+		height: 270px;
 	}
 }
 @media(max-width: $smallphone-max) {
 	.rt-block.ea-addr {
 		padding-right: 0px;
 		margin-left: 0px;
+	}
+	.homepage-categories .homepage-category {
+		height: 190px;
 	}
 }
 
@@ -72,15 +84,15 @@ $largedisplay-min: 1200px;
 }
 
 // at this width, the navigation is UNDER the slides.
-@media(min-width: $tablet-min) and (max-width: $tablet-max) { // 767 to 959 
+@media(min-width: $tablet-min) and (max-width: $tablet-max) { // 767 to 959
 	.fpss-container{
 		width:100%!important;
 		height:auto!important;
 		.slides-wrapper {
-			width: 100%!important; // 
+			width: 100%!important; //
 		}
-		.navigation-wrapper { 
-			width: 100%!important;  // 
+		.navigation-wrapper {
+			width: 100%!important;  //
 			height: auto!important;
 			font-size: 0px;
 			ul.navigation {
@@ -101,8 +113,8 @@ $largedisplay-min: 1200px;
 		width:100%!important;
 		height:auto!important;
 		.slides-wrapper {
-			width: 100%!important; // 
-		} 
+			width: 100%!important; //
+		}
 	}
 	.navigation-wrapper{
 		display: none;
