@@ -8,22 +8,22 @@
  * @package 	WooCommerce/Templates
  * @version     2.0.0
  */
-/* Mods  
-* 2Sept2014 zig:  if nothing in sidebar, dont display it 
+/* Mods
+* 2Sept2014 zig:  if nothing in sidebar, dont display it
 */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $flatsome_opt;
 get_header('shop'); ?>
 
 <div class="cat-header">
-<?php 
+<?php
 // GET CUSTOM HEADER CONTENT FOR CATEGORY
 if(function_exists('get_term_meta')){
 	$queried_object = get_queried_object();
-	
+
 	if (isset($queried_object->term_id)){
 
-		$term_id = $queried_object->term_id;  
+		$term_id = $queried_object->term_id;
 		$content = get_term_meta($term_id, 'cat_meta');
 
 		if(isset($content[0]['cat_header'])){
@@ -55,7 +55,7 @@ if(function_exists('get_term_meta')){
 <div class="large-12 columns">
 	<div class="breadcrumb-row">
     <div class="left">
-	<?php 
+	<?php
 	/** Output the WooCommerce Breadcrumb  */
     $defaults = array(
         'delimiter'  => '<span>/</span>',
@@ -93,7 +93,7 @@ if(function_exists('get_term_meta')){
 
 			<?php woocommerce_product_loop_start(); ?>
 
-				<?php woocommerce_product_subcategories(array( 'hide_empty' => 1) ); ?>
+				<?php woocommerce_product_subcategories( /* array( 'hide_empty' => 0) */ ); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -150,14 +150,14 @@ if(function_exists('get_term_meta')){
       wp_reset_query();
     ?>
   <?php endif; ?>
-                      
+
  </div><!-- .large-12 -->
 
 <?php if (($flatsome_opt['category_sidebar'] == 'right-sidebar') &&  is_active_sidebar('shop-sidebar') )  { ?>
 <!-- Right Shop sidebar -->
         <div class="large-3 right columns">
             <?php dynamic_sidebar('shop-sidebar'); ?>
-        </div>            
+        </div>
 <?php } else if (($flatsome_opt['category_sidebar'] == 'left-sidebar') &&  is_active_sidebar('shop-sidebar') ) { ?>
 <!-- Left Shop sidebar -->
 		<div class="large-3 left columns">

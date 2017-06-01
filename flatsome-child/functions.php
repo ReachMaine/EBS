@@ -1,6 +1,7 @@
 <?php
 
-
+  require_once(get_stylesheet_directory().'/custom/language.php');
+  
 /* remove the displaying of price in the loop (for archives & search ) */
  remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
 /* nope - remove_action( 'woocommerce_variable_add_to_cart', 'woocommerce_variable_add_to_cart', 30 ); */
@@ -12,7 +13,7 @@ add_filter( 'woocommerce_subcategory_count_html', 'jk_hide_category_count' );
 
 add_filter( 'woocommerce_product_subcategories_hide_empty', 'show_empty_categories', 20, 1 ); //show empy categoies
 function show_empty_categories ( $show_empty ) {
-    $show_empty  =  true;
+    $show_empty  =  false;
     // You can add other logic here too
     return $show_empty;
 }
