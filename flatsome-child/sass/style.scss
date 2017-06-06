@@ -145,12 +145,12 @@ aside.widget_layered_nav select {
 	color: white;
 }
 
-/* Homepage Catgories */
+/* Homepage Catgories in three columns*/
 .homepage-categories {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 20px;
-	.homepage-category {
+	padding: 20px 0px;
+	a {
 		height: 600px;
 		width: 32%;
 		background-position: center center;
@@ -167,14 +167,24 @@ aside.widget_layered_nav select {
 			margin-bottom: 0;
 		}
 	}
-	.home-design-center {
-		background-image: url("http://www.ebsbuild.com/wp-content/uploads/2017/06/homepage-design-center.jpg");
+	a.home-design-center {
+		background-image: url("http://www.ebsbuild.com/wp-content/uploads/2017/06/homepage-design-center2.jpg");
 	}
-	.home-hardware {
+	a.home-hardware {
 		background-image: url("http://www.ebsbuild.com/wp-content/uploads/2017/06/homepage-hardware.jpg");
 	}
-	.home-lumber {
+	a.home-lumber {
 		background-image: url("http://www.ebsbuild.com/wp-content/uploads/2017/06/homepage-lumberyard.jpg");
+	}
+}
+
+/* homepage full-width backgrounds */
+
+.homepage-row {
+	background-color: #e0e0e0;
+	.homepage-row-inner {
+		max-width: 1050px;
+		margin: auto;
 	}
 }
 
@@ -185,6 +195,8 @@ aside.widget_layered_nav select {
 	justify-content: space-around;
 	text-align: center;
 	padding: 0px 10px;
+	max-width: 960px;
+	margin: auto;
 	.ebs-single-location {
 		padding: 0px 10px;
 		width: 175px;
