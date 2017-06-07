@@ -6,7 +6,10 @@ $ebsgreen: #017F4C;
 em {
 	font-style: italic;
 }
-
+p {
+	font-size: 1.1em;
+	color: #2b2b2b;
+}
 strong {
 	font-weight: bold;
 }
@@ -14,10 +17,10 @@ strong {
 	float:right;
 }
 h1, h2, h3, h4, h5, h6, .component-content h2, .module-title .title  {
-
+	color: black;
 }
 .module-title .title {
-	
+
 }
 
 

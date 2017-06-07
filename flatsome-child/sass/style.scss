@@ -145,6 +145,30 @@ aside.widget_layered_nav select {
 	color: white;
 }
 
+/* Design Center Sections */
+
+.ebs-section {
+	clear: both;
+	img {
+		width: 200px;
+	}
+}
+
+.ebs-section:nth-child(odd) {
+	img {
+		float: left;
+		margin: 0 15px 15px 0;
+	}
+}
+
+.ebs-section:nth-child(even) {
+	img {
+		float: right;
+		margin: 0 0 15px 15px;
+	}
+}
+
+
 /* Homepage Catgories in three columns*/
 .homepage-categories {
 	display: flex;
@@ -182,10 +206,15 @@ aside.widget_layered_nav select {
 
 .homepage-row {
 	background-color: #e0e0e0;
-	.homepage-row-inner {
-		max-width: 1050px;
-		margin: auto;
-	}
+}
+
+.homepage-row-white {
+	background-color: white;
+}
+
+.homepage-row-inner {
+	max-width: 1050px;
+	margin: auto;
 }
 
 /* Homepage Locations */
