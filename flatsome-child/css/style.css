@@ -194,10 +194,12 @@ aside.widget_layered_nav select {
 
 /* homepage full-width backgrounds */
 .homepage-row {
-  background-color: #e0e0e0; }
+  background-color: #e0e0e0;
+  padding: 10px; }
 
 .homepage-row-white {
-  background-color: white; }
+  background-color: white;
+  padding: 10px; }
 
 .homepage-row-inner {
   max-width: 1050px;
@@ -235,6 +237,13 @@ aside.widget_layered_nav select {
       font-size: .9em; }
     .ebs-locations .ebs-single-location span {
       line-height: 1.2em; }
+
+.ebs-designers {
+  display: flex;
+  flex-wrap: wrap; }
+  .ebs-designers .ebs-designer {
+    margin-right: 30px;
+    margin-bottom: 15px; }
 
 /* ===================================================== */
 /* Media Queries --------------------------------------- */

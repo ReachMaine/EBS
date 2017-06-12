@@ -206,10 +206,12 @@ aside.widget_layered_nav select {
 
 .homepage-row {
 	background-color: #e0e0e0;
+	padding: 10px
 }
 
 .homepage-row-white {
 	background-color: white;
+	padding: 10px;
 }
 
 .homepage-row-inner {
@@ -256,6 +258,17 @@ aside.widget_layered_nav select {
 		span {
 			line-height: 1.2em
 		}
+	}
+}
+
+//Design Center Contacts
+
+.ebs-designers {
+	display: flex;
+	flex-wrap: wrap;
+	.ebs-designer {
+		margin-right: 30px;
+		margin-bottom: 15px;
 	}
 }
 
