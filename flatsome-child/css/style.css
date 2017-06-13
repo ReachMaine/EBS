@@ -205,6 +205,12 @@ aside.widget_layered_nav select {
   max-width: 1050px;
   margin: auto; }
 
+.row.container, .ux-slider, .ux-row-slider {
+  margin-bottom: 0px !important; }
+
+h3.section-title {
+  margin-top: 10px; }
+
 /* Homepage Locations */
 .ebs-locations {
   display: flex;
@@ -243,7 +249,12 @@ aside.widget_layered_nav select {
   flex-wrap: wrap; }
   .ebs-designers .ebs-designer {
     margin-right: 30px;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    line-height: 1.3em; }
+
+.ebs-brand-logos img {
+  width: 200px;
+  padding: 10px; }
 
 /* ===================================================== */
 /* Media Queries --------------------------------------- */
