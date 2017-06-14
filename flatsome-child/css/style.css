@@ -16,6 +16,9 @@
 /* Colors ---------------------------------------------- */
 /* Typography ------------------------------------------ */
 /* General Tags ---------------------------------------- */
+body {
+  color: #2b2b2b; }
+
 em {
   font-style: italic; }
 
@@ -126,7 +129,7 @@ aside.widget_layered_nav select {
   width: 500px; }
 
 .ebs-item-logo-photo-box {
-  background-color: #ddd;
+  background-color: #fff;
   text-align: center; }
 
 .ebs-brand-logo {
@@ -209,7 +212,8 @@ aside.widget_layered_nav select {
   margin-bottom: 0px !important; }
 
 h3.section-title {
-  margin-top: 10px; }
+  margin-top: 10px;
+  font-size: 1.6em; }
 
 /* Homepage Locations */
 .ebs-locations {
@@ -244,6 +248,11 @@ h3.section-title {
     .ebs-locations .ebs-single-location span {
       line-height: 1.2em; }
 
+.full-width-background {
+  margin: 40px -100% 25px;
+  padding: 15px 100% 30px;
+  background: #e0e0e0; }
+
 .ebs-designers {
   display: flex;
   flex-wrap: wrap; }
@@ -255,6 +264,11 @@ h3.section-title {
 .ebs-brand-logos img {
   width: 200px;
   padding: 10px; }
+
+.footer {
+  border-top: 3px solid #EEE; }
+  .footer .widget a {
+    color: #2b2b2b; }
 
 /* ===================================================== */
 /* Media Queries --------------------------------------- */
