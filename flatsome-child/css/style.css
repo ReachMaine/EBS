@@ -156,9 +156,14 @@ aside.widget_layered_nav select {
 
 /* Design Center Sections */
 .ebs-section {
-  clear: both; }
+  clear: both;
+  padding-top: 30px; }
   .ebs-section img {
-    width: 200px; }
+    width: 275px; }
+  .ebs-section p {
+    margin-bottom: 0px; }
+  .ebs-section h3 {
+    font-size: 1.25em; }
 
 .ebs-section:nth-child(odd) img {
   float: left;
@@ -254,12 +259,13 @@ h3.section-title {
   background: #e0e0e0; }
 
 .ebs-designers {
-  display: flex;
-  flex-wrap: wrap; }
+  margin-left: 20px; }
   .ebs-designers .ebs-designer {
-    margin-right: 30px;
+    margin-right: 50px;
     margin-bottom: 15px;
-    line-height: 1.3em; }
+    line-height: 1.3em;
+    text-align: center;
+    display: inline-block; }
 
 .ebs-brand-logos img {
   width: 200px;
