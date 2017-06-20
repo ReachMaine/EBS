@@ -260,7 +260,12 @@ h3.section-title.clearfix.title_bold, h3.section-title.clearfix.title_bold span 
       line-height: 1.2em; }
 
 .ebs-locations.ebs-designers .ebs-single-location {
-  width: 235px; }
+  width: 235px;
+  padding: 5px 10px; }
+  .ebs-locations.ebs-designers .ebs-single-location h3 {
+    font-size: 1.2em; }
+  .ebs-locations.ebs-designers .ebs-single-location h4 {
+    font-size: 1em; }
 
 .full-width-background {
   margin: 40px -100% 25px;
