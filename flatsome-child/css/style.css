@@ -259,6 +259,9 @@ h3.section-title.clearfix.title_bold, h3.section-title.clearfix.title_bold span 
     .ebs-locations .ebs-single-location span {
       line-height: 1.2em; }
 
+.ebs-locations.ebs-designers .ebs-single-location {
+  width: 235px; }
+
 .full-width-background {
   margin: 40px -100% 25px;
   padding: 15px 100% 30px;
