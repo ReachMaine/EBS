@@ -4,7 +4,7 @@
  *
  * @package flatsome
  */
- /* mods 
+ /* mods
 	12Nov14 zig - add google custom search code for search results.
 */
 
@@ -30,30 +30,28 @@ if(isset($flatsome_opt['blog_header'])){ echo do_shortcode($flatsome_opt['blog_h
 		?>
 
 		<div class="page-inner">
-	
-		
+
+
 
 			<header class="page-header">
 				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'flatsome' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 
-			<?php /* <script>
-			  (function() {
-			    var cx = '000992598910587150973:wrnc3sr_qp8';
-			    var gcse = document.createElement('script');
-			    gcse.type = 'text/javascript';
-			    gcse.async = true;
-			    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-			        '//www.google.com/cse/cse.js?cx=' + cx;
-			    var s = document.getElementsByTagName('script')[0];
-			    s.parentNode.insertBefore(gcse, s);
-			  })();
-			</script> */ ?>
-			<gcse:searchresults-only></gcse:searchresults-only>
+			<script>
+	  (function() {
+	    var cx = '000992598910587150973:wrnc3sr_qp8';
+	    var gcse = document.createElement('script');
+	    gcse.type = 'text/javascript';
+	    gcse.async = true;
+	    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(gcse, s);
+	  })();
+	</script>
+	<gcse:searchresults-only></gcse:searchresults-only>
+			<?php /*flatsome_content_nav( 'nav-below' ); */ ?>
 
-			<?php flatsome_content_nav( 'nav-below' ); ?>
 
-		
 	</div><!-- .page-inner -->
 	</div><!-- #content -->
 
@@ -63,7 +61,7 @@ if(isset($flatsome_opt['blog_header'])){ echo do_shortcode($flatsome_opt['blog_h
 		}?>
 	</div><!-- end sidebar -->
 
-</div><!-- end row -->	
+</div><!-- end row -->
 </div><!-- end page-wrapper -->
 
 <?php get_footer(); ?>

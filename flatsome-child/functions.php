@@ -1,7 +1,7 @@
 <?php
 
   require_once(get_stylesheet_directory().'/custom/language.php');
-  
+
 /* remove the displaying of price in the loop (for archives & search ) */
  remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
 /* nope - remove_action( 'woocommerce_variable_add_to_cart', 'woocommerce_variable_add_to_cart', 30 ); */
@@ -102,7 +102,7 @@ function ebs_category_help () {
 }
 
 /* after theme setup */
-add_action('after_setup_theme', ea_setup);
+add_action('after_setup_theme', 'ea_setup');
 	/**  ea_setup
 	*  init stuff that we have to init after the main theme is setup.
 	*
@@ -110,7 +110,7 @@ add_action('after_setup_theme', ea_setup);
 	function ea_setup() {
 	 /* do stuff here afte theme is setup, can call it's functions, etc */
 
-
+   remove_action('flatsome_absolute_footer_secondary','flatsome_footer_payment_icons', 10);
 	}
 
 	/* add filter to allow empty product categories to show in woo_product_categories() */
