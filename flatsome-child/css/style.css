@@ -332,6 +332,9 @@ h3.section-title.clearfix.title_bold, h3.section-title.clearfix.title_bold span 
   background-color: #017F4C;
   opacity: 1; }
 
+li.tab {
+  margin-right: 30px; }
+
 /* ===================================================== */
 /* Media Queries --------------------------------------- */
 /* ===================================================== */
