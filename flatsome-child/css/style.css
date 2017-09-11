@@ -163,6 +163,8 @@ aside.widget_layered_nav select {
     margin-bottom: 0px; }
   .ebs-section h3 {
     font-size: 1.25em; }
+  .ebs-section .gallery {
+    margin-top: 25px; }
 
 .ebs-section:nth-child(odd) img {
   float: left;
