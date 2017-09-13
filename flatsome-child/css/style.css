@@ -260,6 +260,13 @@ h3.section-title {
   margin-top: 10px;
   font-size: 1.6em; }
 
+.section-title-bold-center span, .section-title-bold span {
+  border: 2px solid #017f4c; }
+
+.section-title b {
+  opacity: 1;
+  background-color: #017f4c; }
+
 h3.section-title.clearfix.title_bold.gray_title span {
   background-color: #e0e0e0; }
 
