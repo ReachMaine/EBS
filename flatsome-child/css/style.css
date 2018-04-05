@@ -355,7 +355,16 @@ li.tab {
     height: auto; } }
 @media (max-width: 767px) {
   .homepage-categories a {
-    height: 270px; } }
+    height: 270px; }
+
+  #content .map-inner {
+    position: relative !important;
+    width: 100%;
+    max-width: 80% !important;
+    right: 0;
+    margin: auto;
+    top: 0;
+    border: 1px solid #017F4C; } }
 @media (max-width: 480px) {
   .rt-block.ea-addr {
     padding-right: 0px;
