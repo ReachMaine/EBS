@@ -3,5 +3,5 @@ $('document').ready(function() {
 });
 
 $('document').ready(function() {
-  $("a[href='http://www.ebsbuild.com/product-category/design-center/kitchens-baths/countertops/']").attr('href', 'http://www.ebsbuild.com/design-center/kitchen-and-bath/countertops/')
+  $("a[href='https://www.ebsbuild.com/product-category/design-center/kitchens-baths/countertops/']").attr('href', 'https://www.ebsbuild.com/design-center/kitchen-and-bath/countertops/')
 });

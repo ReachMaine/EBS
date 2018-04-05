@@ -35,7 +35,7 @@
 src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
-<script src="http://www.ebsbuild.com/wp-content/themes/flatsome-child/custom.js"></script>
+<script src="//www.ebsbuild.com/wp-content/themes/flatsome-child/custom.js"></script>
 <?php /* end google ads popup */ ?>
 </head>
 
