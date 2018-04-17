@@ -283,12 +283,12 @@ h3.section-title.clearfix.title_bold, h3.section-title.clearfix.title_bold span 
   max-width: 960px;
   margin: auto; }
   .ebs-locations .ebs-single-location {
-    padding: 0px 10px;
+    padding: 0px 10px 15px 10px;
     width: 175px; }
     .ebs-locations .ebs-single-location p {
       margin-top: .2em; }
     .ebs-locations .ebs-single-location .ebs-location-name {
-      font-size: 1em;
+      font-size: 1.2em;
       margin-bottom: 0em; }
     .ebs-locations .ebs-single-location .ebs-location-address {
       font-weight: normal;
@@ -296,10 +296,10 @@ h3.section-title.clearfix.title_bold, h3.section-title.clearfix.title_bold span 
       font-size: .8em; }
     .ebs-locations .ebs-single-location .ebs-location-phone {
       margin-bottom: 0em;
-      font-size: .75em; }
+      font-size: .9em; }
     .ebs-locations .ebs-single-location .ebs-hours-title {
       font-weight: bold;
-      font-size: 1em; }
+      font-size: .9em; }
     .ebs-locations .ebs-single-location p {
       line-height: .3em;
       font-size: .9em; }
