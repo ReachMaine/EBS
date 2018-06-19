@@ -9,8 +9,9 @@
  *
  * @package flatsome
  */
-/* mods 
+/* mods
 	11Nov14 zig - Make 404 page & add google custom search here.
+	28Jun17 zig - add some links
 */
 get_header(); ?>
 
@@ -39,7 +40,17 @@ get_header(); ?>
 		</script>
 		<gcse:searchbox-only></gcse:searchbox-only>
 							<?php /* get_search_form(); */ ?>
+							<ul>
+							 	<li><a href="https://www.ebsbuild.com/">Our home page</a></li>
+							 	<li><a href="https://www.ebsbuild.com/design-center/">Design Center</a></li>
+							 	<li><a href="https://www.ebsbuild.com/hardware-store/">Hardware Store</a></li>
+							 	<li><a href="https://www.ebsbuild.com/lumber-building-supplies/">Lumber &amp; Build Supplies</a></li>
+							</ul>
+							<p>Check out our <a href="https://www.ebsbuild.com/deals">current sales flyer</a></p>
 
+							<p>Or drop us a line...</p>
+
+							<?php echo do_shortcode("[ninja_forms id=1]"); ?>
 								</div><!-- .entry-content -->
 			</article><!-- #post-0 .post .error404 .not-found -->
 
