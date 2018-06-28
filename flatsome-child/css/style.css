@@ -76,9 +76,14 @@ ul.product_picsAcross {
   padding-top: 0px; }
 #masthead .right-links #ebs_cando {
   height: 100px; }
+#masthead .search-form {
+  margin-bottom: 0px; }
 
 #masthead.stuck.move_down #ebs_cando {
   max-height: 75px; }
+
+.header-wrapper.stuck .header-main .nav > li > a {
+  line-height: 25px !important; }
 
 .top-divider {
   border: 0px; }

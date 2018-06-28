@@ -12,6 +12,7 @@
 /* mods
 	11Nov14 zig - Make 404 page & add google custom search here.
 	28Jun17 zig - add some links
+	28jun18 zig - remove google custom search script & put get_search_form back
 */
 get_header(); ?>
 
@@ -26,20 +27,8 @@ get_header(); ?>
 
 
 		<p><?php _e( 'It looks like nothing was found at this location. Prehaps try one of the links below or a search?', 'flatsome' ); ?></p>
-		<script>
-		  (function() {
-		    var cx = '000992598910587150973:wrnc3sr_qp8';
-		    var gcse = document.createElement('script');
-		    gcse.type = 'text/javascript';
-		    gcse.async = true;
-		    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-		        '//www.google.com/cse/cse.js?cx=' + cx;
-		    var s = document.getElementsByTagName('script')[0];
-		    s.parentNode.insertBefore(gcse, s);
-		  })();
-		</script>
-		<gcse:searchbox-only></gcse:searchbox-only>
-							<?php /* get_search_form(); */ ?>
+
+							 <?php get_search_form(); ?>
 							<ul>
 							 	<li><a href="https://www.ebsbuild.com/">Our home page</a></li>
 							 	<li><a href="https://www.ebsbuild.com/design-center/">Design Center</a></li>
